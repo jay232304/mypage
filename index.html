@@ -62,29 +62,35 @@
         }
 
         .mycards {
-            width: 1200px;
-            margin: 40px auto 20px auto;
+            margin: 20px auto 0px auto;
+            width: 95% max-width:1200px;
         }
 
         .mypost {
-           
-           
+
+
             width: 500px;
-            margin:50px auto 20px auto; 
-            padding:20px 20px 20px 20px;
+            margin: 20px auto 20px auto;
+            padding: 20px;
             box-shadow: 0px 0px 3px 0px gray;
+
+        }
+
+        .mypost > div { 
+            padding: 6px;
+        
         }
 
         .mybtn {
             display: flex;
-            flex-direction:row;
+            flex-direction: row;
             align-items: center;
             justify-content: center;
             margin-top: 20px;
         }
 
-        .mybtn > button { 
-            margin-right:10px;
+        .mybtn>button {
+            margin-right: 10px;
 
         }
     </style>
@@ -95,11 +101,29 @@
         <h1>내 생애 최고의 영화들!</h1>
         <button>영화기록하기</button>
     </div>
+
     <div class="mypost">
-        <div class="form-floating mb-3">
+        <div class="form-floating">
             <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
             <label for="floatingInput">영화 url</label>
         </div>
+
+
+        <div class="input-group">
+            <label class="input-group-text" for="inputGroupSelect01">별점</label>
+            <select class="form-select" id="inputGroupSelect01">
+                <option selected>선택하기</option>
+                <option value="1">⭐</option>
+                <option value="2">⭐⭐</option>
+                <option value="3">⭐⭐⭐</option>
+                <option value="4">⭐⭐⭐⭐</option>
+                <option value="5">⭐⭐⭐⭐⭐</option>
+            </select>
+        </div>
+
+
+
+
         <div class="form-floating">
             <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
             <label for="floatingTextarea">코멘트</label>
@@ -109,7 +133,7 @@
             <button type="button" class="btn btn-outline-dark">닫기</button>
 
         </div>
-        
+
     </div>
     <div class="mycards">
         <div class="row row-cols-1 row-cols-md-4 g-4">
@@ -156,7 +180,7 @@
                     <div class="card-body">
                         <h5 class="card-title">영화제목</h5>
                         <p class="card-text">여기에 코멘트가 들어감</p>
-                        <p>⭐⭐⭐</p>
+                        <p>⭐⭐⭐⭐</p>
                         <p class="mycomment"> 여기에 나의 의견을 쓰면 되겠죠</p>
                     </div>
                 </div>

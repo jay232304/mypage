@@ -63,7 +63,7 @@
 
         .mycards {
             margin: 20px auto 0px auto;
-            width:1330px
+            width: 1330px
         }
 
         .mypost {
@@ -76,9 +76,10 @@
 
         }
 
-        .mypost > div { 
+        .mypost>div {
             padding: 6px;
-        
+
+
         }
 
         .mybtn {
@@ -94,18 +95,28 @@
 
         }
     </style>
+    <script>
+       $(document).ready(function() {
+    fetch("http://spartacodingclub.shop/sparta_api/weather/seoul").then(res => res.json()).then(data => {
+        console.log(data)
+    })
+})
+    </script>
 </head>
 
 <body>
     <div class="mytitle">
         <h1>내 생애 최고의 영화들!</h1>
+        <div>현재 서울의 날씨 : <span id="temp">20</span>도</div>
         <button>영화기록하기</button>
+        
     </div>
 
     <div class="mypost">
         <div class="form-floating">
             <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
             <label for="floatingInput">영화 url</label>
+
         </div>
 
 
